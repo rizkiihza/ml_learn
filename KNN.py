@@ -95,3 +95,9 @@ class KNN:
                     key_max[0] = key
         return key_max
 
+    def test(self, listx, listy):
+        right_predict = [0]
+        for i in range(len(listx)):
+            if self.predict(listx[i]) == listy[i]:
+                right_predict[0] += 1
+        return right_predict / len(listx)
