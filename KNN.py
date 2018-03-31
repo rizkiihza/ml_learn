@@ -95,11 +95,3 @@ class KNN:
                     key_max[0] = key
         return key_max
 
-
-x = [[-1,-1], [-2,-3], [4,4], [9,5], [3,8]]
-y = [2, 2, 1, 1, 1]
-knn = KNN(3)
-knn.fit(x, y)
-result = knn.predict([-2,-2])
-print(result)
-
