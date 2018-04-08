@@ -70,6 +70,14 @@ class NaiveBayes:
                 result = label
         return result
 
+    def score(self, x_test, y_test):
+        right_result = [0]
+        for i in range(len(x_test)):
+            label_predict = self.predict(x_test[i])
+            if label_predict == y_test[i]:
+                right_result[0] += 1
+        return right_result[0] / len(x_test)
+
 nb = NaiveBayes()
 
 data_feature = [

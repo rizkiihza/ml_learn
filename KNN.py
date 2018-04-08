@@ -51,6 +51,7 @@ class priority_queue:
             return result
         return [-999, -999]
 
+
 class KNN:
     def __init__(self, k = 3):
         self.feature = []
